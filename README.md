@@ -2,6 +2,11 @@
 
 The good old BBQCoin ran on Ubuntu 16.04. We know it's old, but wanted to keep the original code and blockchain, going back to 2012.
 
+Premine? Nah man, we included the original 2012 chain. We minted a few blocks at our pool to test and see if it worked.
+This one is for the community! The X account "bbqcoin_2012" is acting like they're the 2012 og team haha.
+
+Need [a bootstrap.dat file? click this link](https://mega.nz/file/6I0Cma4K#EdcdtnZhlK8IsUJ0TmjZqx-aF43uhoe68DhFRa4vQ5g)
+
 Use the Dockerfile to run a node.
 
 ## Build
@@ -23,6 +28,12 @@ docker run -v ./data:/root/.bbqcoin -p 19322:19322 -p 19323:19323 -it bbqcoin ba
 cd BBQCoin/src
 ./bbqcoind -printtoconsole
 ```
+
+or if bootstrapping
+```bash
+./bbqcoind -loadblock=/root/.bbqcoin/bootstrap.dat
+```
+
 
 ## Create wallet
 ```
