@@ -26,10 +26,7 @@ RUN	git clone $GIT_COIN_URL $GIT_COIN_NAME
 RUN cd $GIT_COIN_NAME \
     && wget https://github.com/litecoin-project/litecoin/blob/master/autogen.sh \
     && chmod +x configure \
-	&& chmod +x src/leveldb/build_detect_platform \
-    && cd src/leveldb \
-    && wget https://raw.githubusercontent.com/miguelfreitas/twister-core/a3a926e3d4b46c52e49f7f93298ff6b6c6b782f8/src/leveldb/Makefile \
-    && cd ../..
+	&& chmod +x src/leveldb/build_detect_platform
 
 RUN cd $GIT_COIN_NAME/src/secp256k1/ \
 	&& chmod +x autogen.sh \
