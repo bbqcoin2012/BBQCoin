@@ -25,4 +25,4 @@ build
 .deps
 !depends/Makefile
 !depends
-
+!src/leveldb/Makefile
